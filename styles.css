@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crea columnas automáticas */
+    gap: 10px; /* Espacio entre elementos */
+    padding: 20px;
+}
+
+.artwork {
+    position: relative; /* Permite posicionar la descripción sobre la imagen */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.artwork img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s; /* Agrega una transición suave al efecto de escala */
+}
+
+.artwork:hover img {
+    transform: scale(1.1); /* Escala la imagen al pasar el mouse */
+}
+
+.description {
+    position: absolute; /* Posiciona la descripción sobre la imagen */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.3s; /* Transición suave para mostrar la descripción */
+}
+
+.artwork:hover .description {
+    opacity: 1; /* Muestra la descripción al pasar el mouse sobre la imagen */
+}
+
+/* Clases para un collage dinámico */
+.artwork:nth-child(1) {
+    grid-column: span 2; /* Ocupa dos columnas */
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
+.artwork:nth-child(2) {
+    grid-column: span 1; /* Ocupa una columna */
+    grid-row: span 1; /* Ocupa una fila */
+}
+
+.artwork:nth-child(3) {
+    grid-column: span 1; /* Ocupa una columna */
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
+.artwork:nth-child(4) {
+    grid-column: span 2; /* Ocupa dos columnas */
+    grid-row: span 1; /* Ocupa una fila */
+}
+
+.artwork:nth-child(5) {
+    grid-column: span 1; /* Ocupa una columna */
+    grid-row: span 1; /* Ocupa una fila */
+}
+
+.artwork:nth-child(6) {
+    grid-column: span 1; /* Ocupa una columna */
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
+.artwork:nth-child(7) {
+    grid-column: span 2; /* Ocupa dos columnas */
+    grid-row: span 1; /* Ocupa una fila */
+}
+
+.artwork:nth-child(8) {
+    grid-column: span 1; /* Ocupa una columna */
+    grid-row: span 1; /* Ocupa una fila */
+}
+
+
+.hero {
+    background-color: #ccc; /* Fondo para el héroe */
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+}
